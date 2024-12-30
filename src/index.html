@@ -4,30 +4,35 @@
     <meta charset="UTF-8" />
     <title>Vue Mastery</title>
     <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   </head>
-  <body>
+  <body class="bg-orange-200">
     <div id="app">
-      <div class="nav-bar"></div>
-
-      <div class="cart">
-        <p>Cart({{ cart.length }})</p>
+      <div class="flex justify-center pt-20">
+        <div class="w-96 border p-3 bg-white">
+          <div class="flex justify-center mb-10">
+            <img :src="imgUrl" alt="image of cocktail">
+          </div>
+          <h2 class="text-3xl mb-5">{{ name }}</h2>
+          <div class="mb-5">
+            <h4 class="text-2xl italic mb-3">Ingredients</h4>
+            <ul>
+              <li v-for="ingredient in ingredients">{{ ingredient }}</li>
+            </ul>
+          </div>
+          <div class="mb-5">
+            <h4 class="text-2xl italic mb-3">Instructions</h4>
+            <p>{{ instructions }}</p>
+          </div>
+        </div>
       </div>
-      <product-display
-        :premium="premium"
-        @add-to-cart="updateCart"
-      ></product-display>
+
     </div>
 
     <!-- Import App -->
     <script src="./main.js"></script>
-
-    <!-- Import Components -->
-    <script src="./components/ProductDisplay.js"></script>
-    <script src="./components/ReviewForm.js"></script>
-    <script src="./components/ReviewList.js"></script>
 
     <!-- Mount App -->
     <script>
