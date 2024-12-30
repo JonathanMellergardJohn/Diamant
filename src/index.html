@@ -10,8 +10,9 @@
   </head>
   <body class="bg-orange-200">
     <div id="app">
+
       <div class="flex justify-center pt-20">
-        <div class="w-96 border p-3 bg-white">
+        <div v-if="name !== ''" class="w-96 border p-3 bg-white">
           <div class="flex justify-center mb-10">
             <img :src="imgUrl" alt="image of cocktail">
           </div>
@@ -27,6 +28,7 @@
             <p>{{ instructions }}</p>
           </div>
         </div>
+        <h2 v-else>Your cocktail is coming up...</h2>
       </div>
 
     </div>

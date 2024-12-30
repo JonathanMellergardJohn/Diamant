@@ -1,10 +1,10 @@
 const app = Vue.createApp({
   data() {
     return {
-      name: 'Shanghai Cocktail',
-      ingredients: ['1 oz Jamaican Light Rum', '1 tsp Anisette', 'Granadine 1/2 tsp', 'Juice of 1/4 Lemon'],
-      imgUrl: 'https://www.thecocktaildb.com/images/media/drink/ttyrxr1478820678.jpg',
-      instructions: 'Shake all ingredients with ice, strain into a cocktail glass, and serve.',
+      name: '',
+      ingredients: [],
+      imgUrl: '',
+      instructions: '',
       cocktail: []
     }
   },
