@@ -4,8 +4,7 @@ const app = Vue.createApp({
       name: '',
       ingredients: [],
       imgUrl: '',
-      instructions: '',
-      cocktail: []
+      instructions: ''
     }
   },
   methods: {
